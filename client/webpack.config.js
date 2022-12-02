@@ -1,15 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+console.log('qwe', path.join(__dirname, '/dist', '/views'));
 module.exports = {
     entry: './src/index.tsx',
     output: {
-        path: path.join(__dirname, "/dist"), // the bundle output path
-        filename: "bundle.js", // the name of the bundle
+        path: path.join(__dirname, "dist"), // the bundle output path
+        filename: "bundles/bundle.[hash].js", // the name of the bundle
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: './views/index.html',
             template: "src/index.html", // to import index.html file inside index.js
+            publicPath: path.join(__dirname, "..")
         }),
     ],
     devServer: {
