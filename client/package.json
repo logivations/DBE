@@ -1,0 +1,25 @@
+{
+  "name": "standlone.dbe.client",
+  "version": "1.0.0",
+  "description": "Standalone DBE Client",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack serve --mode development",
+    "watch": "webpack serve --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
