@@ -1,38 +1,56 @@
-const {src, series, dest} = require('gulp');
+const {src, series, task, parallel, dest} = require('gulp');
 const run = require('gulp-run');
 const clean = require('gulp-clean');
+const install = require('gulp-install');
 
+const path = {
+    build: {
+        client: './build/client',
+        server: './build/server'
+
+    },
+    src: {
+        client: './client/dist/**/*.*',
+        server: './server/dist/**/*.*'
+    }
+}
 //NPM tasks
-
-async function deleteNodeModules(cb) {
-    await src('./client/node_modules', {read: false}).pipe(clean());
-    await src('./server/node_modules', {read: false}).pipe(clean());
-    cb();
+function deleteClientNodeModules () {
+    return src('./client/node_modules', {read: false, allowEmpty: true}).pipe(clean());
 }
 
-async function npmInstall(cb) {
-    return await src('./client').pipe(run('npm install --ws'));
-    // await run('npm install --ws', {}).exec();
-    cb();
+function deleteServerNodeModules() {
+    return src('./client/node_modules', {read: false, allowEmpty: true}).pipe(clean());
 }
-function npmCi(cb) {
-    run('npm ci --ws', {}).exec(null, cb);
+
+function npmInstall() {
+    return src(['./client/package.json', './server/package.json']).pipe(install());
 }
 
 // SRC tasks
 
-
 function build(cb) {
-    run('npm build --ws', {}).exec(null, cb);
+   return run('npm run build', {}).exec('', cb);
 }
 
-function productionBuild() {
-
+function copyBuildFiles(cb) {
+    return src(path.src.client).pipe(dest(path.build.client))
 }
 
+// function build(cb) {
+//
+//
+// }
 
-// gulp.task('default', ['build'])
+
+
+const deleteNodeModules = parallel(deleteClientNodeModules, deleteServerNodeModules);
 
 exports.deleteNodeModules = deleteNodeModules
+exports.reinstallNodeModules = series(deleteNodeModules, npmInstall);
+
+
 exports.npmInstall = npmInstall
+exports.copyBuildFiles = copyBuildFiles
 exports.default = npmInstall;
+exports.build = build;
