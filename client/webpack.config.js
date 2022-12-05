@@ -11,8 +11,17 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: './views/index.html',
-            template: "src/index.html", // to import index.html file inside index.js
-            publicPath: path.join(__dirname, "..")
+            // template: "src/index.html", // to import index.html file inside index.js
+            // publicPath: path.join(__dirname, 'dist'),
+            templateContent: (params) => {
+                return params.htmlWebpackPlugin.files.js.reduce((acc, script) => {
+                    console.log('script', script);
+                    acc += `<script src="${script}"></script> \n\r`;
+                    return acc;
+                }, '');
+            },
+            hash: true,
+            inject: false
         }),
     ],
     devServer: {

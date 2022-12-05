@@ -7,10 +7,10 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(
       AppModule,
   );
-
-  app.useStaticAssets(join(__dirname, '../..', 'client', 'dist', 'static'));
-  app.setBaseViewsDir(join(__dirname, '../..', 'client', 'dist', 'views'));
-  app.setViewEngine('hbs');
+console.log('qw', join(__dirname, '../..', 'client', 'views'));
+  app.useStaticAssets(join(__dirname, '../..', 'client', 'dist'));
+  app.setBaseViewsDir(join(__dirname, '../..', 'client', 'views'));
+  app.setViewEngine('ejs');
 
   await app.listen(3001);
 }
