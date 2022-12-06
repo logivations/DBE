@@ -7,11 +7,14 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(
       AppModule,
   );
-console.log('qw', join(__dirname, '../..', 'client', 'views'));
   app.useStaticAssets(join(__dirname, '../..', 'client', 'dist'));
   app.setBaseViewsDir(join(__dirname, '../..', 'client', 'views'));
   app.setViewEngine('ejs');
 
-  await app.listen(3001);
+  const serverHost = process.env.HOST || '0.0.0.0';
+  const serverPort = parseInt(process.env.PORT, 10) || 3001;
+  await app.listen(serverPort, serverHost);
+
+  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
