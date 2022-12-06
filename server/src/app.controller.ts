@@ -7,5 +7,6 @@ export class AppController {
   @Get('/')
   @Render('index.ejs')
   getHello() {
+    return {warehouseId: 123321, campaignId: 222333};
   }
 }

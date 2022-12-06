@@ -7,11 +7,15 @@ const liveServer = require('gulp-live-server');
 const path = {
     build: {
         client: './build/client',
-        server: './build/server'
+        clientModule: './build/client/node_modules',
+        server: './build/server',
+        serverModule: './build/server/node_modules'
     },
     src: {
         client: './client/dist/**/*.*',
-        server: './server/dist/**/*.*'
+        clientModules: './client/dist/**/*.*',
+        server: './server/dist/**/*.*',
+        serverModules: './server/dist/**/*.*'
     }
 };
 
@@ -36,6 +40,14 @@ function copyClientBuildFiles() {
     return src(path.src.client).pipe(dest(path.build.client))
 }
 
+function copyClientModeModules() {
+    return src(path.src.clientModules).pipe(dest(path.build.clientModule))
+}
+
+function copyServerModeModules() {
+    return src(path.src.serverModules).pipe(dest(path.build.serverModule))
+}
+
 function copyServerBuildFiles() {
     return src(path.src.server).pipe(dest(path.build.server))
 }
@@ -51,7 +63,7 @@ function deleteBuildFiles() {
     return src('./build', {read: false, allowEmpty: true}).pipe(clean());
 }
 
-const copyBuildFiles = parallel(copyClientBuildFiles, copyServerBuildFiles);
+const copyBuildFiles = parallel(copyClientBuildFiles, copyServerBuildFiles, copyServerModeModules, copyClientModeModules);
 const deleteNodeModules = parallel(deleteClientNodeModules, deleteServerNodeModules);
 const reinstallNodeModules = series(deleteNodeModules, npmInstall)
 
@@ -60,11 +72,13 @@ exports.reinstallNodeModules = series(deleteNodeModules, npmInstall);
 
 const build = series(reinstallNodeModules, deleteBuildFiles, buildServerAndClient, copyBuildFiles, runServer);
 
-exports.npmInstall = npmInstall
-exports.copyBuildFiles = copyBuildFiles
+exports.npmInstall = npmInstall;
+exports.copyBuildFiles = copyBuildFiles;
 exports.build = build;
-exports.deleteNodeModules = deleteNodeModules
+exports.deleteNodeModules = deleteNodeModules;
+exports.deleteBuildFiles = deleteBuildFiles;
 exports.reinstallNodeModules = reinstallNodeModules;
 exports.runServer = runServer;
+exports.buildServerAndClient = buildServerAndClient;
 
-exports.default = build
+exports.default = build;
