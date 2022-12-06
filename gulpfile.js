@@ -29,28 +29,28 @@ function npmInstall() {
 
 // SRC tasks
 
-function build(cb) {
-   return run('npm run build', {}).exec('', cb);
+function buildServerAndClient() {
+   return run('npm run build', {}).exec();
 }
 
-function copyBuildFiles(cb) {
+function copyClientBuildFiles() {
     return src(path.src.client).pipe(dest(path.build.client))
 }
 
-// function build(cb) {
-//
-//
-// }
+function copyServerBuildFiles() {
+    return src(path.src.server).pipe(dest(path.build.server))
+}
 
 
-
+const copyBuildFiles = parallel(copyClientBuildFiles, copyServerBuildFiles)
 const deleteNodeModules = parallel(deleteClientNodeModules, deleteServerNodeModules);
+const reinstallNodeModules = series(deleteNodeModules, npmInstall)
 
-exports.deleteNodeModules = deleteNodeModules
-exports.reinstallNodeModules = series(deleteNodeModules, npmInstall);
-
+const build = series(reinstallNodeModules, buildServerAndClient, copyBuildFiles);
 
 exports.npmInstall = npmInstall
 exports.copyBuildFiles = copyBuildFiles
 exports.default = npmInstall;
 exports.build = build;
+exports.deleteNodeModules = deleteNodeModules
+exports.reinstallNodeModules = reinstallNodeModules;
