@@ -1,21 +1,36 @@
 const path = require("path");
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
+const HtmlWebpackSkipAssetsPlugin = require('html-webpack-skip-assets-plugin').HtmlWebpackSkipAssetsPlugin;
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-console.log('qwe', path.join(__dirname, '/dist', '/views'));
+const mode = process.env.NODE_ENV || 'production';
+const isDevMode = mode === 'development';
+
 module.exports = {
+    mode: mode,
     entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, "dist"), // the bundle output path
         filename: "bundles/bundle.[hash].js", // the name of the bundle
+        chunkFilename: "chunks/chunk-[name].[contenthash].js",
+        sourceMapFilename: '[file].map',
+        crossOriginLoading: "anonymous",
+        assetModuleFilename: 'images/[hash][ext][query]'
     },
+    watchOptions: {aggregateTimeout: 800, poll: 1000, ignored: /node_modules/},
+    stats: {colors: true},
+    devtool: 'inline-source-map',
+    target: 'web',
     plugins: [
         new HtmlWebpackPlugin({
             filename: './views/index.html',
-            // template: "src/index.html", // to import index.html file inside index.js
-            // publicPath: path.join(__dirname, 'dist'),
             templateContent: (params) => {
                 return params.htmlWebpackPlugin.files.js.reduce((acc, script) => {
-                    console.log('script', script);
                     acc += `<script src="${script}"></script> \n\r`;
                     return acc;
                 }, '');
@@ -23,10 +38,22 @@ module.exports = {
             hash: true,
             inject: false
         }),
+        new MiniCssExtractPlugin({
+            filename: "styles/styles.[name].css",
+            chunkFilename: "styles/styles.[name].css"
+        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [{from: 'static'}]
+        // }),
+        new webpack.DefinePlugin({
+            NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+            CONTEXT_PATH: JSON.stringify("/" + 'contextPath')
+        }),
+        new CaseSensitivePathsPlugin(),
+        new HtmlWebpackSkipAssetsPlugin(),
+        new CompressionPlugin(),
+        // new BundleAnalyzerPlugin()
     ],
-    devServer: {
-        port: 3030, // you can change the port
-    },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx", ".css"],
         alias: {
@@ -56,24 +83,24 @@ module.exports = {
                 test: /\.(eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 type: 'asset/resource'
             },
-            // {
-            //     test: /\.(le|c)ss$/,
-            //     use: [
-            //         isDevMode ? 'style-loader': MiniCssExtractPlugin.loader,
-            //         'css-loader',
-            //         {
-            //             loader: 'postcss-loader', //shows warnings
-            //             options: {
-            //                 postcssOptions: {
-            //                     plugins: [
-            //                         ["autoprefixer"],
-            //                     ],
-            //                 },
-            //             }
-            //         },
-            //         'less-loader'
-            //     ]
-            // }
+            {
+                test: /\.(le|c)ss$/,
+                use: [
+                    isDevMode ? 'style-loader': MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader', //shows warnings
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    ["autoprefixer"],
+                                ],
+                            },
+                        }
+                    },
+                    'less-loader'
+                ]
+            }
         ],
     },
 };

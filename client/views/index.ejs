@@ -9,6 +9,15 @@
 </head>
 <body>
 <div id="app"></div>
+
+<script>
+    const warehouseId = '<%= locals.warehouseId%>';
+    const campaignId = '<%= locals.campaignId%>';
+    window['CONTEXT_PATH'] = 'api';
+</script>
+<!--<script src="./../src/index.tsx"></script>-->
+
 <%- include('./../dist/views/index.html') %>
+
 </body>
 </html>

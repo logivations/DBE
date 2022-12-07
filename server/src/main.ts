@@ -8,6 +8,7 @@ async function bootstrap() {
       AppModule,
   );
   app.useStaticAssets(join(__dirname, '../..', 'client', 'dist'));
+  // app.useStaticAssets(join(__dirname, '../..', 'client', 'src'));
   app.setBaseViewsDir(join(__dirname, '../..', 'client', 'views'));
   app.setViewEngine('ejs');
 

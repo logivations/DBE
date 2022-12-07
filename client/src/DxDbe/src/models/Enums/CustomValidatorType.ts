@@ -1,0 +1,17 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+enum CustomValidatorType {
+	CAMPAIGN_START_RANGE_VALIDATOR = 'CAMPAIGN_START_RANGE_VALIDATOR',
+	CAMPAIGN_END_RANGE_VALIDATOR = 'CAMPAIGN_END_RANGE_VALIDATOR',
+	UPPERCASE_LATIN_OR_DIGIT_VALIDATOR = 'UPPERCASE_LATIN_OR_DIGIT_VALIDATOR',
+	THE_SAME_STATION_ON_TOP = 'THE_SAME_STATION_ON_TOP',
+	RACK_APPEARANCE_CALIBRATION_MARKER_OF_ONE_TYPE = 'RACK_APPEARANCE_CALIBRATION_MARKER_OF_ONE_TYPE',
+	POSITIVE_NUMBER = 'POSITIVE_NUMBER',
+	POSITIVE_OR_ZERO_NUMBER = 'POSITIVE_OR_ZERO_NUMBER',
+	RANGE_MIN_MAX = 'RANGE_MIN_MAX',
+}
+
+export default CustomValidatorType;

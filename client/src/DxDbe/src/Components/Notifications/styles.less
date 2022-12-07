@@ -1,0 +1,104 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+
+.dx-toast-stack {
+  margin-bottom: 70px;
+}
+
+.notification {
+  background-color: white;
+  color: black;
+  .notification-content-wrapper {
+    height: inherit;
+    width: 100%;
+    padding: 5px;
+    .notify-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .notify-message {
+      font-weight: 400;
+    }
+    .control-notify-buttons {
+      .dx-button.dx-button-has-icon .dx-icon {
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+    .type-notify {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .dx-toast-info {
+    border: 2px solid #5598FC;
+    background-color: rgba(82, 152, 252, 0.1);
+  }
+
+  .dx-toast-error {
+    border: 2px solid #E63E3E;
+    background-color: rgba(230, 62, 63, 0.1);
+  }
+
+  .dx-toast-success {
+    border: 2px solid #92B960;
+    background-color: rgba(146, 185, 96, 0.1);
+  }
+
+  .dx-toast-warning {
+    border: 2px solid #DFCD26;
+    background-color: rgba(223, 205, 38, 0.1);
+  }
+
+  .dx-toast-error,
+  .dx-toast-success,
+  .dx-toast-info,
+  .dx-toast-warning {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    min-height: 80px;
+    height: max-content!important;
+
+  }
+}
+
+.theme-light {
+  .notification {
+    background-color: white;
+    color: black;
+  }
+  .notification-content-wrapper {
+    .dx-button.dx-button-has-icon .dx-icon {
+      filter: none!important;;
+    }
+  }
+}
+
+.theme-dark {
+  .notification {
+    background-color: #2a2a2a;
+    color: white;
+  }
+  .notification-content-wrapper {
+    .dx-button.dx-button-has-icon .dx-icon {
+      filter: brightness(0) invert(1)!important;
+    }
+  }
+}

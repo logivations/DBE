@@ -1,0 +1,191 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+.widget-container {
+	display: flex !important;
+}
+
+.flex-container-sb {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+}
+
+.dx-popup-title {
+	display: flex;
+	align-items: center;
+	height: 32px;
+
+	.dx-toolbar-item-content {
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+.dx-field .dx-field-value .dx-button {
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+.dx-button.dx-button-has-icon .dx-icon-close {
+	width: 14px;
+	height: 14px;
+	background-position: 0 0;
+	background-size: 14px 14px;
+	padding: 0;
+	font-size: 14px;
+	text-align: center;
+	line-height: 14px;
+	margin-right: 0;
+	margin-left: 0;
+	filter: none;
+}
+
+#screen-builder-template {
+	.dx-radiobutton {
+		height: auto;
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.dx-fieldset {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.templates-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 15px;
+		.template-image-wrapper {
+			border: 1px solid #d3d3d3;
+			border-radius: 6px;
+			padding: 2px;
+			margin-bottom: 10px;
+
+			&:hover {
+				cursor: pointer;
+				border-color: #8dbf4c;
+			}
+
+			&.selected {
+				border-color: #8dbf4c;
+			}
+		}
+
+		img {
+			margin: 4px 4px 0 4px;
+		}
+	}
+}
+.theme-dark {
+	#screen-builder-template {
+		.templates-container {
+			.template-image-wrapper {
+				border: 1px solid #4d4d4d;
+				&:hover {
+					border-color: #8dbf4c;
+				}
+				&.selected {
+					border-color: #8dbf4c;
+				}
+				img {
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+}
+
+.compare-table-modal {
+	.dx-filterbuilder.dx-widget > .dx-filterbuilder-group > .dx-filterbuilder-group-item {
+		display: none !important;
+	}
+
+	.dx-filterbuilder-action-icon.dx-icon-remove.dx-filterbuilder-action {
+		display: none;
+	}
+
+	.dx-filterbuilder-group {
+		margin-bottom: 10px;
+	}
+
+	.dx-filterbuilder-group {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.dx-filterbuilder-group:nth-child(1) {
+		.dx-filterbuilder-text.dx-filterbuilder-item-field,
+		.dx-filterbuilder-text.dx-filterbuilder-item-operation {
+			margin-top: 16px;
+		}
+	}
+	.dx-filterbuilder-group-item:nth-child(1) {
+		display: flex;
+	}
+	.dx-filterbuilder-group:nth-child(2) {
+		margin-top: -16px;
+		.dx-filterbuilder-text.dx-filterbuilder-item-field,
+		.dx-filterbuilder-text.dx-filterbuilder-item-operation {
+			visibility: hidden;
+		}
+	}
+}
+
+
+.help-button {
+	text-align: left!important;
+}
+
+.add-sorting-button {
+	text-align: left!important;
+	margin-top: 10px;
+}
+
+
+.dx-scrollable-content {
+	overflow-y: auto;
+}
+
+
+.dx-popup-content {
+	.dx-button.dx-button-has-icon .dx-icon {
+		width: 16px;
+		height: 16px;
+		background-size: 16px 16px;
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+
+.settings-list {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.hidden-column-filter-wrapper {
+	margin-top: 15px;
+	.dx-form-group-content {
+		padding-top: 5px;
+	}
+}
+
+.hidden-column-control {
+	.dx-field-item-content .dx-form-group-with-caption {
+		text-align: right;
+	}
+}
+
