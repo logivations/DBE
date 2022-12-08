@@ -4285,4 +4285,4 @@ const metadata = {
     "childParentTableInfo": []
 };
 
-export default metadata;
+export default JSON.stringify(metadata);

@@ -42,9 +42,9 @@ module.exports = {
             filename: "styles/styles.[name].css",
             chunkFilename: "styles/styles.[name].css"
         }),
-        // new CopyWebpackPlugin({
-        //     patterns: [{from: 'static'}]
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [{from: 'static', to: 'styles/themes'}]
+        }),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(process.env.NODE_ENV),
             CONTEXT_PATH: JSON.stringify("/" + 'contextPath')

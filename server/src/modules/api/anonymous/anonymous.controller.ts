@@ -1,4 +1,9 @@
-import { Controller } from '@nestjs/common';
+import {Controller, Get} from '@nestjs/common';
 
 @Controller('anonymous')
-export class AnonymousController {}
+export class AnonymousController {
+    @Get()
+    ping() {
+        return true;
+    }
+}

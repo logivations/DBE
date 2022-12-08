@@ -18,20 +18,20 @@ const ParentTablePopup = React.lazy(
 	() => import(/* webpackChunkName: "ParentTablePopup" */ './Components/ParentTablePopup/ParentTablePopup'),
 );
 
-function App() {
-	// const {screenBuilder} =  useScreenBuilderContext();
+function DxDbe() {
+	const {screenBuilder} =  useScreenBuilderContext();
 	return (
 		<div className="App">
 			<DxDbeHeader tableName={'original_table'} />
-			{/*<ParentTablePopup />*/}
-			{/*<ToolbarModalWrapper tableType={TableInstanceManager.ORIGINAL_TABLE} />*/}
-			{/*{*/}
-			{/*	!screenBuilder.isScreenBuilderOn*/}
-			{/*		? <OriginalTable height={undefined}/>*/}
-			{/*		: <ScreenBuilder isScreenBuilder={true}/>*/}
-			{/*}*/}
+			<ParentTablePopup />
+			<ToolbarModalWrapper tableType={TableInstanceManager.ORIGINAL_TABLE} />
+			{
+				!screenBuilder.isScreenBuilderOn
+					? <OriginalTable height={undefined}/>
+					: <ScreenBuilder isScreenBuilder={true}/>
+			}
 		</div>
 	);
 }
 
-export default App;
+export default DxDbe;

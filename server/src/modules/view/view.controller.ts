@@ -1,4 +1,11 @@
-import { Controller } from '@nestjs/common';
+import {Controller, Get, Render} from '@nestjs/common';
 
-@Controller('view')
-export class ViewController {}
+@Controller('')
+export class ViewController {
+
+    @Get()
+    @Render('index')
+    getView() {
+
+    }
+}

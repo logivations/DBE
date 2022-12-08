@@ -75,9 +75,9 @@ const DbeDataGrid = ({tableName, height, isScreenBuilderTable, tableType}) => {
 					customizeColumns={customizeColumns}
 					onInitialized={({component}) => {
 						//TODO: remove this piece of shit
-						setTimeout(() => {
-							component.repaint();
-						}, 2000);
+						// setTimeout(() => {
+						// 	component.repaint.call(component);
+						// }, 2000);
 					}}
 					onOptionChanged={onOptionChanged}
 					onSelectionChanged={(e) => debouncedRefresh(e)}

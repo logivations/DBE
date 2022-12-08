@@ -276,7 +276,7 @@ class Communicator extends BaseCommunicator {
 	public runServerPing() {
 		if (!this.pingIsRunning) {
 			setInterval(async () => {
-				await this.fetchData('/whapp/anonymous/ping');
+				await this.fetchData('/anonymous/ping');
 			}, 45000);
 			this.pingIsRunning = true;
 		}

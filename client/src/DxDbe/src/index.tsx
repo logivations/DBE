@@ -9,7 +9,7 @@ import * as Sentry from '@sentry/react';
 import './index.css';
 import './styles/general.less';
 
-const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
+const DxDbe = React.lazy(() => import(/* webpackChunkName: "DxDbe" */ './DxDbe'));
 const DbeTableDataContextProvider = React.lazy(() => {
     return import(/* webpackChunkName: "DbeTableDataContext" */ './context/DbeTableDataContext').then((module) => ({
         default: module.DbeTableDataContextProvider,
@@ -44,7 +44,7 @@ const RootApp = () => (
                 <ParentTablePopupContextProvider>
                     <ScreenBuilderContextProvider>
                         <ModalsProvider>
-                            <App/>
+                            <DxDbe/>
                         </ModalsProvider>
                     </ScreenBuilderContextProvider>
                 </ParentTablePopupContextProvider>
