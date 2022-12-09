@@ -1,0 +1,256 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:11111111@localhost:3306/lv_home"
+}
+
+model anmeldeformulare {
+  ID           Int      @id @default(autoincrement()) @db.UnsignedInt
+  name         String   @db.VarChar(30)
+  header       String   @db.Text
+  subheader    String   @db.Text
+  introduction String   @db.Text
+  bullets      String   @db.Text
+  tick1        String   @db.Text
+  tick2        String   @db.Text
+  tick3        String   @db.Text
+  agendalink   String   @db.Text
+  email_text   String   @db.Text
+  enter_time   Boolean?
+}
+
+model browserdetail {
+  id     Int     @id @default(autoincrement()) @db.UnsignedSmallInt
+  cookie String? @db.VarChar(1000)
+  owner  String? @db.VarChar(100)
+
+  @@index([cookie(length: 30)], map: "asdf")
+}
+
+model cal_entries {
+  id          Int      @id @default(autoincrement()) @db.UnsignedSmallInt
+  text        String   @db.Text
+  datum       DateTime @db.Date
+  lastchanged DateTime @db.DateTime(0)
+  person      String   @db.Text
+}
+
+model circle {
+  id      Int      @id @default(autoincrement()) @db.UnsignedSmallInt
+  name_id Int      @db.UnsignedSmallInt
+  score   Int      @db.UnsignedInt
+  anzahl  Int      @db.UnsignedSmallInt
+  datum   DateTime @db.DateTime(0)
+  browser String   @db.Text
+}
+
+model cookies_names {
+  id     Int     @id @default(autoincrement()) @db.UnsignedInt
+  cookie String  @db.VarChar(1000)
+  owner  String? @db.VarChar(100)
+
+  @@index([cookie(length: 10)], map: "ccc")
+}
+
+model cookies_names_adwords {
+  id     Int    @id @default(autoincrement())
+  cookie String @db.VarChar(30)
+  owner  String @db.VarChar(30)
+}
+
+model data_adwords {
+  id                  Int    @id @default(autoincrement())
+  country             String @db.VarChar(30)
+  firm_region         String @db.VarChar(100)
+  locationCoordinates String @db.VarChar(100)
+  date                String @db.VarChar(20)
+  come_from           String @db.VarChar(250)
+  come_to             String @db.VarChar(50)
+  ip                  String @db.VarChar(70)
+  browser             String @db.VarChar(50)
+}
+
+model elearning_users {
+  reg_name  String? @db.VarChar(30)
+  company   String? @db.VarChar(30)
+  position  String? @db.VarChar(50)
+  email     String? @db.VarChar(50)
+  phone     String? @db.VarChar(20)
+  pass_word String? @db.VarChar(512)
+  confirm   Int     @default(0)
+  id        Int     @id @default(autoincrement()) @db.UnsignedInt
+}
+
+model ips {
+  id      Int      @id @default(autoincrement()) @db.UnsignedMediumInt
+  ip      String   @db.Text
+  seite   String   @db.Text
+  datum   DateTime @db.DateTime(0)
+  x       String   @db.Text
+  c_id    Int      @db.UnsignedInt
+  ip_id   Int      @db.UnsignedInt
+  bd_id   Int      @db.UnsignedInt
+  browser String   @db.Text
+  referer String   @db.Text
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model ips_adwords {
+  id      String   @db.VarChar(9)
+  ip      String   @db.VarChar(9)
+  seite   String   @db.VarChar(30)
+  datum   DateTime @db.DateTime(0)
+  x       Int
+  c_id    String   @db.VarChar(50)
+  ip_id   String   @db.VarChar(50)
+  browser String   @db.VarChar(50)
+  referer String   @db.VarChar(100)
+
+  @@ignore
+}
+
+model ips_copy {
+  id              Int      @id @default(autoincrement()) @db.UnsignedMediumInt
+  ip              String   @db.Text
+  seite           String   @db.Text
+  datum           DateTime @db.DateTime(0)
+  x               String   @db.Text
+  cookie_detail   String   @db.Text
+  c_id            Int      @default(0) @db.UnsignedInt
+  ip_id           Int      @default(0) @db.UnsignedInt
+  bd_id           Int      @default(0) @db.UnsignedInt
+  browser         String   @db.Text
+  browser_detail  String   @db.Text
+  user_info       String   @db.Text
+  provider_detail String   @db.Text
+  referer         String   @db.Text
+}
+
+model ips_names {
+  id     Int    @id @default(autoincrement()) @db.UnsignedInt
+  cookie String @db.Char(20)
+  owner  String @db.VarChar(100)
+
+  @@index([cookie(length: 7)], map: "iii")
+}
+
+model ips_names_adwords {
+  id     Int @id @default(autoincrement())
+  cookie Int
+  owner  Int
+}
+
+model js_saver {
+  id    Int      @id @default(autoincrement()) @db.UnsignedSmallInt
+  md5   String   @db.Text
+  datum DateTime @default(now()) @db.Timestamp(0)
+  used  String   @db.VarChar(1)
+}
+
+model prevented_shows {
+  id      Int      @id @default(autoincrement()) @db.UnsignedSmallInt
+  datum   DateTime @db.DateTime(0)
+  ip      String   @db.Text
+  how     String   @db.Text
+  comment String   @db.Text
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model questionnaire_de {
+  name      String?  @db.VarChar(50)
+  single1   String?  @db.VarChar(100)
+  multiple1 String?  @db.VarChar(300)
+  single2   String?  @db.VarChar(100)
+  multiple2 String?  @db.VarChar(300)
+  single3   String?  @db.VarChar(100)
+  message   String?  @db.VarChar(500)
+  date_time DateTime @db.DateTime(0)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model questionnaire_en {
+  name      String?  @db.VarChar(50)
+  single1   String?  @db.VarChar(100)
+  multiple1 String?  @db.VarChar(300)
+  single2   String?  @db.VarChar(100)
+  multiple2 String?  @db.VarChar(300)
+  single3   String?  @db.VarChar(100)
+  message   String?  @db.VarChar(500)
+  date_time DateTime @db.DateTime(0)
+
+  @@ignore
+}
+
+model saves {
+  id        Int      @id @default(autoincrement()) @db.UnsignedMediumInt
+  nutzer_id Int      @db.UnsignedSmallInt
+  datum     DateTime @db.DateTime(0)
+  x         String   @db.Text
+}
+
+model saves_new {
+  id        Int      @id @default(autoincrement()) @db.UnsignedMediumInt
+  nutzer_id Int      @db.UnsignedSmallInt
+  datum     DateTime @db.DateTime(0)
+  x         String   @db.Text
+}
+
+model saves_objects {
+  id          Int    @id @default(autoincrement()) @db.UnsignedInt
+  save_id     Int    @db.UnsignedMediumInt
+  name        String @db.Text
+  description String @db.Text
+  width       Int    @db.UnsignedSmallInt
+  height      Int    @db.UnsignedSmallInt
+  left        Int    @db.UnsignedSmallInt
+  top         Int    @db.UnsignedSmallInt
+  rotate      Int    @db.UnsignedSmallInt
+  type        String @db.Text
+}
+
+model so_new {
+  id          Int    @id @default(autoincrement()) @db.UnsignedInt
+  save_id     Int    @db.UnsignedMediumInt
+  name        String @db.Text
+  description String @db.Text
+  width       Int    @db.UnsignedSmallInt
+  height      Int    @db.UnsignedSmallInt
+  left        Int    @db.UnsignedSmallInt
+  top         Int    @db.UnsignedSmallInt
+  rotate      Int    @db.UnsignedSmallInt
+  type        String @db.Text
+  r           Int    @db.UnsignedTinyInt
+  g           Int    @db.UnsignedTinyInt
+  b           Int    @db.UnsignedTinyInt
+  resizeable  String @db.Text
+  rows        Int    @db.UnsignedTinyInt
+  columns     Int    @db.UnsignedTinyInt
+  real_height Int    @db.TinyInt
+}
+
+model users_data {
+  id       Int    @id @default(autoincrement())
+  username String @db.VarChar(20)
+  login    String @db.VarChar(20)
+  password String @db.VarChar(200)
+}
+
+model v_portal_users {
+  reg_name  String? @db.VarChar(30)
+  company   String? @db.VarChar(30)
+  position  String? @db.VarChar(50)
+  email     String? @db.VarChar(50)
+  phone     String? @db.VarChar(20)
+  pass_word String? @db.VarChar(512)
+  confirm   Int     @default(0)
+  id        Int     @id @default(autoincrement()) @db.UnsignedInt
+}
