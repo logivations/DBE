@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.dx-header .lv-logo {
+  margin-top: 5px;
+}
+.dx-header .lv-logo path {
+  transition: all 0.2s;
+}
+.dx-header .dx-toolbar .dx-toolbar-after {
+  padding-right: 10px;
+}
+.dx-header .dx-toolbar .dx-toolbar-after .dx-toolbar-item {
+  padding: 0 0 0 15px;
+}
+.dx-header .header-text a,
+.dx-header .header-text div {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 4px;
+  transition: color 0.2s;
+}
+.dx-header .header-text a:hover {
+  color: #8dbf4c;
+}
+.dx-header .dx-toolbar .dx-toolbar-items-container {
+  height: 50px;
+  border-bottom: 1px solid #d3d3d3;
+  transition: border-color 0.2s;
+}
+.dx-header .dx-toolbar .dx-toolbar-items-container .dx-toolbar-before {
+  padding-left: 10px;
+}
+.dx-header .dx-toolbar .dx-toolbar-before {
+  padding-left: 10px;
+}
+.dx-header .dx-toolbar .dx-toolbar-before .dx-toolbar-label {
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+/*# sourceMappingURL=style.css.map */

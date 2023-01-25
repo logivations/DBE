@@ -1,0 +1,40 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.theme-light .dx-icon.dx-icon-close {
+  filter: inherit;
+  color: #0d0d0d;
+}
+.theme-light .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #d3d3d3;
+}
+.theme-light .dx-overlay-shader {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.theme-light .header-text a,
+.theme-light .header-text div {
+  color: #0d0d0d;
+}
+.theme-light .notification {
+  background-color: white;
+}
+.theme-light .foreign-key-btn {
+  border: 1px solid #8dbf4c;
+  background-color: #f1f7ea;
+  min-height: 18px;
+}
+.theme-light .foreign-key-btn:hover {
+  background-color: #e1ead7;
+}
+.theme-light .foreign-key-btn.invalid {
+  border: 1px solid #d9534f;
+}
+.theme-light .dx-dropdownmenu-list .dx-list-item .dx-list-item-content {
+  border: 1px solid #d3d3d3;
+}
+/*# sourceMappingURL=light-custom-theme.css.map */

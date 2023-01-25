@@ -1,0 +1,226 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.theme-dark {
+  background: #313131;
+}
+.theme-dark .dx-icon.dx-icon-close {
+  filter: inherit;
+  color: #dedede;
+}
+.theme-dark .lv-logo .secondColor {
+  fill: #ffffff;
+}
+.theme-dark .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #4d4d4d;
+}
+.theme-dark .toolbar-info-holder.dx-toolbar .dx-toolbar-items-container {
+  border-color: #4d4d4d;
+}
+.theme-dark .foreign-key-btn {
+  border: 1px solid #555c4e;
+  background-color: #333532;
+}
+.theme-dark .foreign-key-btn:hover {
+  background-color: #2e312d;
+}
+.theme-dark .foreign-key-btn.invalid {
+  border: 1px solid #d9534f;
+}
+.theme-dark .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #4d4d4d;
+}
+.theme-dark .gutter {
+  background-color: #1d1d1d;
+}
+.theme-dark .dx-dropdownmenu-list .dx-list-item .dx-list-item-content {
+  border: 1px solid #4d4d4d;
+}
+.theme-dark .dx-overlay-shader {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.theme-dark .header-text a,
+.theme-dark .header-text div {
+  color: #dedede;
+}
+.theme-dark .notification {
+  background-color: #2a2a2a;
+}
+.theme-dark .notification .dx-icon {
+  filter: brightness(100);
+}
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+.theme-light .dx-icon.dx-icon-close {
+  filter: inherit;
+  color: #0d0d0d;
+}
+.theme-light .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #d3d3d3;
+}
+.theme-light .dx-overlay-shader {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.theme-light .header-text a,
+.theme-light .header-text div {
+  color: #0d0d0d;
+}
+.theme-light .notification {
+  background-color: white;
+}
+.theme-light .foreign-key-btn {
+  border: 1px solid #8dbf4c;
+  background-color: #f1f7ea;
+  min-height: 18px;
+}
+.theme-light .foreign-key-btn:hover {
+  background-color: #e1ead7;
+}
+.theme-light .foreign-key-btn.invalid {
+  border: 1px solid #d9534f;
+}
+.theme-light .dx-dropdownmenu-list .dx-list-item .dx-list-item-content {
+  border: 1px solid #d3d3d3;
+}
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.foreign-btn-cell:not(.dx-datagrid-action) {
+  padding: 1px 4px !important;
+}
+#dbe-app .zeroPadding {
+  padding: 0;
+}
+#dbe-app .dx-icon {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(68%) saturate(344%) hue-rotate(44deg) brightness(93%) contrast(90%);
+}
+#dbe-app .dx-icon.dx-icon-close {
+  filter: none;
+}
+#dbe-app .dx-row.dx-column-lines.dx-header-row .dx-command-expand.dx-datagrid-group-space {
+  padding: 5.5px;
+}
+#dbe-app .dx-row.dx-column-lines.dx-datagrid-filter-row .dx-command-expand.dx-datagrid-group-space {
+  padding: 6px;
+}
+#dbe-app .dx-datagrid-content .dx-datagrid-table .dx-row > td,
+#dbe-app .dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+  vertical-align: middle;
+}
+#dbe-app .dx-dropdownbutton-popup-wrapper .dx-popup-content,
+#dbe-app .dx-dropdownlist-popup-wrapper .dx-popup-content {
+  padding: 0;
+}
+#dbe-app .dx-toolbar-before .dx-toolbar-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+#dbe-app .dx-datagrid .dx-header-filter::before {
+  font-size: 12px;
+}
+#dbe-app .dx-header-filter.dx-header-filter-empty::before {
+  color: #8dbf4c;
+}
+#dbe-app .dx-header-filter::before {
+  color: #3d4b2d;
+}
+#dbe-app .dx-pager {
+  padding-left: 10px;
+}
+#dbe-app .dx-popup-bottom.dx-toolbar .dx-toolbar-item,
+#dbe-app .dx-rtl.dx-popup-bottom.dx-toolbar .dx-toolbar-menu-container {
+  margin-left: 5px;
+  padding: 0;
+}
+#dbe-app .dx-popup-bottom .dx-button {
+  min-width: 60px;
+}
+#dbe-app .dx-popup-bottom.dx-toolbar .dx-toolbar-after {
+  padding-left: 15px;
+  width: auto;
+  display: flex;
+  justify-content: end;
+  padding-right: 0;
+  align-items: center;
+}
+#dbe-app .dx-list-item-content {
+  padding: 0 10px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+#dbe-app .dx-list-select-all-checkbox {
+  margin: 0;
+}
+#dbe-app .dx-list-item-before-bag.dx-list-select-checkbox-container,
+#dbe-app .dx-list-item-before-bag.dx-list-select-radiobutton-container {
+  width: 16px;
+}
+#dbe-app .dx-list-item-before-bag .dx-list-select-checkbox,
+#dbe-app .dx-list-item-before-bag .dx-list-select-radiobutton {
+  margin: 0;
+}
+#dbe-app .dx-list-select-all {
+  padding: 0;
+}
+#dbe-app .dx-dropdownmenu-list {
+  min-width: inherit;
+}
+#dbe-app .dx-dropdownmenu-list .dx-list-item {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 0 0;
+}
+#dbe-app .dx-dropdownmenu-list .dx-list-item .dx-list-item-content {
+  padding: 0;
+  justify-content: center;
+  height: 30px;
+  border-radius: 4px;
+}
+#dbe-app .dx-dropdownmenu-list .dx-toolbar-menu-section {
+  border: none;
+}
+#dbe-app .dx-dropdownmenu-list .dx-toolbar-menu-section .dx-toolbar-hidden-button .dx-button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+#dbe-app .dx-dropdownmenu-list .dx-toolbar-menu-section .dx-toolbar-item-auto-hide {
+  padding: 0;
+  width: 100%;
+}
+#dbe-app .dx-dropdownmenu-list .dx-toolbar-menu-section .dx-button-mode-outlined.dx-buttongroup-last-item.dx-button {
+  border: none;
+}
+#dbe-app .dx-dropdownmenu-list .dx-dropdownbutton {
+  width: 100%;
+}
+#dbe-app .dx-field-item-label-text {
+  font-weight: 600;
+}
+#dbe-app .dx-button-has-text .dx-button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+}
+#dbe-app .dx-button-has-text .dx-button-content .dx-button-text {
+  font-weight: 600;
+}
+#dbe-app .footer-holder .dx-button-has-text .dx-button-content .dx-button-text {
+  font-weight: 400;
+}
+#root .App > .dx-widget.dx-visibility-change-handler[role='presentation'] {
+  height: calc(100vh - 98px - 37px);
+}
+/*# sourceMappingURL=general.css.map */

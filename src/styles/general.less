@@ -1,0 +1,193 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+@import 'dark-custom-theme';
+@import 'light-custom-theme';
+@import '../styles/colors';
+
+.foreign-btn-cell {
+	&:not(.dx-datagrid-action) {
+		padding: 1px 4px !important;
+	}
+}
+
+#dbe-app {
+	.zeroPadding {
+		padding: 0;
+	}
+
+	.dx-icon {
+		&.dx-icon-close {
+			filter: none;
+		}
+		filter: brightness(0) saturate(100%) invert(65%) sepia(68%) saturate(344%) hue-rotate(44deg) brightness(93%)
+			contrast(90%);
+	}
+
+	// fixing detailed view column with expand icon, should be re-fixed
+	.dx-row.dx-column-lines.dx-header-row {
+		.dx-command-expand.dx-datagrid-group-space {
+			padding: 5.5px;
+		}
+	}
+	.dx-row.dx-column-lines.dx-datagrid-filter-row {
+		.dx-command-expand.dx-datagrid-group-space {
+			padding: 6px;
+		}
+	}
+	//
+
+	//data grid content:
+	.dx-datagrid-content .dx-datagrid-table .dx-row > td,
+	.dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+		vertical-align: middle;
+	}
+
+	.dx-dropdownbutton-popup-wrapper .dx-popup-content,
+	.dx-dropdownlist-popup-wrapper .dx-popup-content {
+		padding: 0;
+	}
+	.dx-toolbar-before {
+		.dx-toolbar-label {
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	.dx-datagrid .dx-header-filter::before {
+		font-size: 12px;
+	}
+	.dx-header-filter.dx-header-filter-empty {
+		&::before {
+			color: @brand-primary;
+		}
+	}
+	.dx-header-filter {
+		&::before {
+			color: #3d4b2d;
+		}
+	}
+	.dx-pager {
+		padding-left: 10px;
+	}
+	//
+
+	// weird dx-popup-bottom
+	.dx-popup-bottom.dx-toolbar .dx-toolbar-item,
+	.dx-rtl.dx-popup-bottom.dx-toolbar .dx-toolbar-menu-container {
+		margin-left: 5px;
+		padding: 0;
+	}
+
+	.dx-popup-bottom {
+		.dx-button {
+			min-width: 60px;
+		}
+		&.dx-toolbar .dx-toolbar-after {
+			padding-left: 15px;
+			width: auto;
+			display: flex;
+			justify-content: end;
+			padding-right: 0;
+			align-items: center;
+		}
+	}
+	//
+
+	//list
+	.dx-list-item-content {
+		padding: 0 10px;
+		height: 26px;
+		display: flex;
+		align-items: center;
+	}
+	.dx-list-select-all-checkbox {
+		margin: 0;
+	}
+	.dx-list-item-before-bag.dx-list-select-checkbox-container,
+	.dx-list-item-before-bag.dx-list-select-radiobutton-container {
+		width: 16px;
+	}
+	.dx-list-item-before-bag .dx-list-select-checkbox,
+	.dx-list-item-before-bag .dx-list-select-radiobutton {
+		margin: 0;
+	}
+	.dx-list-select-all {
+		padding: 0;
+	}
+	//
+
+	//dropdownmenu
+	.dx-dropdownmenu-list {
+		min-width: inherit;
+		.dx-list-item {
+			margin-bottom: 5px;
+			margin-top: 5px;
+			padding: 5px 0 0;
+			.dx-list-item-content {
+				padding: 0;
+				justify-content: center;
+				height: 30px;
+				border-radius: 4px;
+			}
+		}
+
+		.dx-toolbar-menu-section {
+			border: none;
+			.dx-toolbar-hidden-button .dx-button {
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+			}
+			.dx-toolbar-item-auto-hide {
+				padding: 0;
+				width: 100%;
+			}
+			.dx-button-mode-outlined.dx-buttongroup-last-item.dx-button {
+				border: none;
+			}
+		}
+		.dx-dropdownbutton {
+			width: 100%;
+		}
+	}
+	//
+
+	// form
+	.dx-field-item-label-text {
+		font-weight: 600;
+	}
+
+
+	//buttons
+	.dx-button-has-text {
+		.dx-button-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 60px;
+			.dx-button-text {
+				font-weight: 600;
+			}
+		}
+	}
+	.footer-holder {
+		.dx-button-has-text {
+			.dx-button-content {
+				.dx-button-text {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+
+#root {
+	.App > .dx-widget.dx-visibility-change-handler[role='presentation'] {
+		height: calc(100vh - 98px - 37px); // 98px - header + toolbar, 37px - footer
+	}
+}

@@ -1,0 +1,53 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+
+#toolbar-holder {
+	&.dx-toolbar {
+		.dx-button-has-icon .dx-icon {
+			width: 20px;
+			height: 20px;
+			background-size: 20px 20px;
+			font-size: 20px;
+			line-height: 20px;
+		}
+		.dx-toolbar-items-container {
+			height: 48px;
+			.dx-toolbar-before {
+				padding-left: 10px;
+				.toolbar-bg-icon {
+					.dx-button-content {
+						height: 30px;
+						width: 30px;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 20px 20px;
+						filter: brightness(0) saturate(100%) invert(65%) sepia(68%) saturate(344%) hue-rotate(44deg)
+							brightness(93%) contrast(90%);
+					}
+				}
+				.select-all-icon {
+					.dx-button-content {
+						background-image: url('../../assets/icons/select-icon.svg');
+					}
+				}
+
+				.deselect-all-icon {
+					.dx-button-content {
+						background-image: url('../../assets/icons/deselect-icon.svg');
+					}
+				}
+			}
+		}
+
+		.dx-toolbar-label {
+			font-size: 14px;
+			font-weight: 600;
+			padding-left: 15px;
+		}
+		.dx-buttongroup-wrapper {
+			height: 32px;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+
+@import '../styles/colors';
+
+&.theme-light {
+	.dx-icon {
+		&.dx-icon-close {
+			filter: inherit;
+			color: @black-color;
+		}
+	}
+
+	.dx-popup-bottom.dx-toolbar {
+		border-top: 1px solid @border-color-light;
+	}
+
+	.dx-overlay-shader {
+		background-color: rgba(0, 0, 0, 0.45);
+	}
+
+	.header-text a,
+	.header-text div {
+		color: @text-color-light-theme;
+	}
+
+	.notification {
+		background-color: white;
+	}
+
+	.foreign-key-btn {
+		border: 1px solid @brand-primary;
+		background-color: #f1f7ea;
+		min-height: 18px;
+		&:hover {
+			background-color: #e1ead7;
+		}
+		&.invalid {
+			border: 1px solid #d9534f;
+		}
+	}
+
+	.dx-dropdownmenu-list {
+		.dx-list-item {
+			.dx-list-item-content {
+				border: 1px solid @border-color-light;
+			}
+		}
+	}
+}

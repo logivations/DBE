@@ -1,0 +1,235 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+@import '../../styles/colors';
+
+#modals-root .dx-popup-wrapper {
+
+
+	.dx-button.dx-button-has-icon .dx-icon-close{
+		width: 16px;
+		height: 16px;
+		background-position: 0 0;
+		background-size: 16px 16px;
+		padding: 0;
+		font-size: 16px;
+		text-align: center;
+		line-height: 16px;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.dx-popup-title {
+		&.dx-toolbar {
+			height: 40px;
+			padding: 0 10px;
+		}
+		.dx-closebutton {
+			left: inherit;
+			right: -4px;
+		}
+	}
+
+	.dx-popup-content {
+		padding: 10px;
+	}
+	.dx-field-label {
+		width: 48%;
+		padding: 0;
+	}
+	.dx-field-value {
+		width: 48%;
+	}
+	.dx-fieldset {
+		margin: 0;
+	}
+
+	.dx-overlay-content {
+		box-shadow: 0 0 30px rgba(77, 77, 77, 0.2);
+	}
+
+	.dx-form-group-caption {
+		font-size: 12px;
+	}
+
+	.dx-list-select-all-label {
+		padding: 0 10px;
+	}
+
+	.invalid-data-cell {
+		&::after {
+			border: 1px solid rgba(217, 83, 79, 0.4);
+		}
+	}
+
+	.help-button {
+		text-align: left !important;
+		.dx-button-has-icon .dx-icon {
+			width: 16px;
+			height: 16px;
+			font-size: 16px;
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+	.dx-popup-title {
+		display: flex;
+		align-items: center;
+		height: 32px;
+
+		.dx-toolbar-item-content {
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	.dx-field .dx-field-value .dx-button {
+		margin-left: 5px;
+		margin-top: 10px;
+	}
+}
+
+// screen builder
+#screen-builder-template {
+	.dx-radiobutton {
+		height: auto;
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.dx-fieldset {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.templates-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 15px;
+		.template-image-wrapper {
+			border: 1px solid #d3d3d3;
+			border-radius: 6px;
+			padding: 2px;
+			margin-bottom: 10px;
+
+			&:hover {
+				cursor: pointer;
+				border-color: @brand-primary;
+			}
+
+			&.selected {
+				border-color: @brand-primary;
+			}
+		}
+		img {
+			margin: 4px 4px 0 4px;
+		}
+	}
+}
+//
+
+//compare-modal
+.compare-table-modal {
+	.dx-filterbuilder.dx-widget > .dx-filterbuilder-group > .dx-filterbuilder-group-item {
+		display: none !important;
+	}
+
+	.dx-filterbuilder-action-icon.dx-icon-remove.dx-filterbuilder-action {
+		display: none;
+	}
+
+	.dx-filterbuilder-group {
+		margin-bottom: 10px;
+	}
+
+	.dx-filterbuilder-group {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.dx-filterbuilder-group:nth-child(1) {
+		.dx-filterbuilder-text.dx-filterbuilder-item-field,
+		.dx-filterbuilder-text.dx-filterbuilder-item-operation {
+			margin-top: 16px;
+		}
+	}
+	.dx-filterbuilder-group-item:nth-child(1) {
+		display: flex;
+	}
+	.dx-filterbuilder-group:nth-child(2) {
+		margin-top: -16px;
+		.dx-filterbuilder-text.dx-filterbuilder-item-field,
+		.dx-filterbuilder-text.dx-filterbuilder-item-operation {
+			visibility: hidden;
+		}
+	}
+}
+//
+
+//user settings
+.settings-list {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+//
+
+//hidden column modal
+#hidden-column-wrapper {
+	.widget-container {
+		display: flex !important;
+	}
+	.hidden-column-filter-wrapper {
+		margin-top: 15px;
+		.dx-form-group-content {
+			padding-top: 5px;
+		}
+	}
+	.hidden-column-control {
+		.dx-field-item-content .dx-form-group-with-caption {
+			text-align: right;
+		}
+	}
+}
+//
+
+//import modal
+#import-modal-wrapper {
+	.custom-date-notifier {
+		width: max-content;
+		padding: 4px 6px;
+		border-radius: 4px;
+		border: 1px solid #92b960;
+		background-color: rgba(146, 185, 96, 0.1);
+	}
+	#import-data-form {
+		.dx-fileuploader-files-container {
+			padding-top: 0;
+		}
+	}
+}
+//
+
+.theme-dark {
+	#screen-builder-template {
+		.templates-container {
+			.template-image-wrapper {
+				border: 1px solid #4d4d4d;
+				&:hover {
+					border-color: @brand-primary;
+				}
+				&.selected {
+					border-color: @brand-primary;
+				}
+				img {
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+}

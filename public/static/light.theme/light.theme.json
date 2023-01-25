@@ -1,0 +1,197 @@
+{
+    "items": [
+        {
+            "key": "$base-accent",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$base-success",
+            "value": "#8dbf4c"
+        },
+        {
+            "key": "$base-font-family",
+            "value": "\"Open Sans\", sans-serif"
+        },
+        {
+            "key": "$datagrid-row-focused-bg",
+            "value": "#CFE9AD"
+        },
+        {
+            "key": "$datagrid-base-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$datagrid-row-error-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$datagrid-search-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$datagrid-menu-icon-color",
+            "value": "#8dbf4c"
+        },
+        {
+            "key": "$datagrid-columnchooser-font-weight",
+            "value": "bold"
+        },
+        {
+            "key": "$datagrid-columnchooser-item-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$datagrid-row-selected-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$datagrid-spin-icon-color",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$datagrid-summary-color",
+            "value": "rgba(13, 13, 13, 0.7)"
+        },
+        {
+            "key": "$datagrid-group-row-color",
+            "value": "rgba(13, 13, 13, 1)"
+        },
+        {
+            "key": "$texteditor-placeholder-color",
+            "value": "rgba(153, 153, 153, 1)"
+        },
+        {
+            "key": "$dropdowneditor-button-active-bg",
+            "value": "rgba(179, 179, 179, 1)"
+        },
+        {
+            "key": "$texteditor-border-color",
+            "value": "rgba(221, 221, 221, 1)"
+        },
+        {
+            "key": "$datagrid-base-background-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "$datagrid-selection-bg",
+            "value": "rgba(207, 233, 173, 1)"
+        },
+        {
+            "key": "$datagrid-search-bg",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$datagrid-row-focused-color",
+            "value": "rgba(13, 13, 13, 1)"
+        },
+        {
+            "key": "$datagrid-hover-bg",
+            "value": "rgba(0, 0, 0, 0.1)"
+        },
+        {
+            "key": "$datagrid-row-alternation-bg",
+            "value": "rgba(0, 0, 0, 0.05)"
+        },
+        {
+            "key": "$datagrid-focused-border-color",
+            "value": "rgba(164, 204, 112, 1)"
+        },
+        {
+            "key": "$form-field-item-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$filterbuilder-text-color",
+            "value": "rgba(13, 13, 13, 1)"
+        },
+        {
+            "key": "$filterbuilder-remove-icon-color",
+            "value": "rgba(217, 83, 79, 0.7)"
+        },
+        {
+            "key": "$filterbuilder-group-operation-color",
+            "value": "rgba(217, 83, 79, 0.4)"
+        },
+        {
+            "key": "$filterbuilder-item-field-color",
+            "value": "rgba(51, 122, 183, 0.3)"
+        },
+        {
+            "key": "$filterbuilder-item-operator-color",
+            "value": "rgba(141, 191, 75, 0.4)"
+        },
+        {
+            "key": "$filterbuilder-plus-icon-color",
+            "value": "rgba(141, 191, 76, 0.7)"
+        },
+        {
+            "key": "$loadindicator-bg",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$toast-color",
+            "value": "#0d0d0d"
+        },
+        {
+            "key": "$tooltip-color",
+            "value": "rgba(13, 13, 13, 1)"
+        }
+    ],
+    "baseTheme": "generic.light.compact",
+    "outputColorScheme": "light-theme",
+    "makeSwatch": false,
+    "version": "22.2.3",
+    "widgets": [
+        "DataGrid",
+        "Accordion",
+        "Box",
+        "ContextMenu",
+        "Drawer",
+        "Menu",
+        "MultiView",
+        "ResponsiveBox",
+        "TabPanel",
+        "Tabs",
+        "TileView",
+        "Toolbar",
+        "TreeView",
+        "Autocomplete",
+        "Calendar",
+        "CheckBox",
+        "ColorBox",
+        "DateBox",
+        "DropDownBox",
+        "Form",
+        "HtmlEditor",
+        "Lookup",
+        "NumberBox",
+        "RadioGroup",
+        "RangeSlider",
+        "SelectBox",
+        "Slider",
+        "Switch",
+        "TagBox",
+        "TextBox",
+        "Validation",
+        "ActionSheet",
+        "Button",
+        "ButtonGroup",
+        "DropDownButton",
+        "SpeedDialAction",
+        "FilterBuilder",
+        "LoadIndicator",
+        "LoadPanel",
+        "Popover",
+        "Popup",
+        "ProgressBar",
+        "ScrollView",
+        "Sortable",
+        "Toast",
+        "Tooltip",
+        "FileManager",
+        "FileUploader",
+        "Gallery",
+        "List"
+    ],
+    "removeExternalResources": false
+}

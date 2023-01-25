@@ -1,0 +1,71 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+
+@import '../styles/colors';
+
+&.theme-dark {
+	background: #313131;
+	.dx-icon {
+		&.dx-icon-close {
+			filter: inherit;
+			color: @white-color;
+		}
+	}
+	.lv-logo {
+		.secondColor {
+			fill: #ffffff;
+		}
+	}
+
+	.dx-popup-bottom.dx-toolbar {
+		border-top: 1px solid @border-color-dark;
+	}
+
+
+	.toolbar-info-holder.dx-toolbar .dx-toolbar-items-container {
+		border-color: @border-color-dark;
+	}
+
+	.foreign-key-btn {
+		border: 1px solid #555c4e;
+		background-color: #333532;
+		&:hover {
+			background-color: #2e312d;
+		}
+		&.invalid {
+			border: 1px solid #d9534f;
+		}
+	}
+
+	.dx-popup-bottom.dx-toolbar {
+		border-top: 1px solid #4d4d4d;
+	}
+	.gutter {
+		background-color: #1d1d1d;
+	}
+	.dx-dropdownmenu-list {
+		.dx-list-item {
+			.dx-list-item-content {
+				border: 1px solid #4d4d4d;
+			}
+		}
+	}
+
+	.dx-overlay-shader {
+		background-color: rgba(255, 255, 255, 0.55);
+	}
+
+	.header-text a,
+	.header-text div {
+		color: @text-color-dark-theme;
+	}
+
+	.notification {
+		background-color: @dark-theme-main-color;
+		.dx-icon {
+			filter: brightness(100);
+		}
+	}
+}

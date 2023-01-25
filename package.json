@@ -1,30 +1,88 @@
 {
-  "name": "standalone_dbe",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/logivations/DBE.git"
+  "name": "root1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sentry/react": "^7.14.1",
+    "@sentry/tracing": "^7.14.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "classnames": "^2.3.2",
+    "devextreme": "^22.1.6",
+    "devextreme-react": "^22.1.6",
+    "dexie": "^3.2.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "query-string": "^7.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-split": "^2.0.14",
+    "typescript": "^4.9.4",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^16.11.21",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "autoprefixer": "^10.4.2",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "compression-webpack-plugin": "^9.2.0",
+    "concurrently": "^7.6.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-skip-assets-plugin": "^1.0.3",
+    "less": "^4.1.3",
+    "less-loader": "^10.2.0",
+    "less-watch-compiler": "^1.16.3",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss-loader": "^6.2.1",
+    "prettier": "2.5.1",
+    "properties-reader": "^2.2.0",
+    "source-map-explorer": "^2.5.2",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.6.3",
+    "webpack": "^5.67.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "build": "npm run build -ws"
+    "build": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts build\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start"
   },
-  "author": "Volodymyr && Viktoriia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/logivations/DBE/issues"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "workspaces": [
-    "./client",
-    "./server"
-  ],
-  "homepage": "https://github.com/logivations/DBE#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-install": "^1.1.0",
-    "gulp-live-server": "^0.0.31",
-    "gulp-run": "^1.7.1"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.theme-dark {
+  background: #313131;
+}
+.theme-dark .dx-icon.dx-icon-close {
+  filter: inherit;
+  color: #dedede;
+}
+.theme-dark .lv-logo .secondColor {
+  fill: #ffffff;
+}
+.theme-dark .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #4d4d4d;
+}
+.theme-dark .toolbar-info-holder.dx-toolbar .dx-toolbar-items-container {
+  border-color: #4d4d4d;
+}
+.theme-dark .foreign-key-btn {
+  border: 1px solid #555c4e;
+  background-color: #333532;
+}
+.theme-dark .foreign-key-btn:hover {
+  background-color: #2e312d;
+}
+.theme-dark .foreign-key-btn.invalid {
+  border: 1px solid #d9534f;
+}
+.theme-dark .dx-popup-bottom.dx-toolbar {
+  border-top: 1px solid #4d4d4d;
+}
+.theme-dark .gutter {
+  background-color: #1d1d1d;
+}
+.theme-dark .dx-dropdownmenu-list .dx-list-item .dx-list-item-content {
+  border: 1px solid #4d4d4d;
+}
+.theme-dark .dx-overlay-shader {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.theme-dark .header-text a,
+.theme-dark .header-text div {
+  color: #dedede;
+}
+.theme-dark .notification {
+  background-color: #2a2a2a;
+}
+.theme-dark .notification .dx-icon {
+  filter: brightness(100);
+}
+/*# sourceMappingURL=dark-custom-theme.css.map */

@@ -1,0 +1,40 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+#toolbar-holder.dx-toolbar .dx-button-has-icon .dx-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  font-size: 20px;
+  line-height: 20px;
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-items-container {
+  height: 48px;
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-items-container .dx-toolbar-before {
+  padding-left: 10px;
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-items-container .dx-toolbar-before .toolbar-bg-icon .dx-button-content {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  filter: brightness(0) saturate(100%) invert(65%) sepia(68%) saturate(344%) hue-rotate(44deg) brightness(93%) contrast(90%);
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-items-container .dx-toolbar-before .select-all-icon .dx-button-content {
+  background-image: url('../../assets/icons/select-icon.svg');
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-items-container .dx-toolbar-before .deselect-all-icon .dx-button-content {
+  background-image: url('../../assets/icons/deselect-icon.svg');
+}
+#toolbar-holder.dx-toolbar .dx-toolbar-label {
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+#toolbar-holder.dx-toolbar .dx-buttongroup-wrapper {
+  height: 32px;
+}
+/*# sourceMappingURL=style.css.map */

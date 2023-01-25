@@ -1,0 +1,110 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2022
+ ******************************************************************************/
+.dx-toast-stack {
+  margin-bottom: 70px;
+}
+.notification {
+  border-radius: 7px;
+}
+.notification .notification-content-wrapper {
+  height: inherit;
+  width: 100%;
+  padding: 5px;
+}
+.notification .notification-content-wrapper .notify-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notification .notification-content-wrapper .notify-message {
+  font-weight: 400;
+}
+.notification .notification-content-wrapper .control-notify-buttons .dx-button.dx-button-has-icon .dx-icon {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.notification .notification-content-wrapper .type-notify {
+  display: flex;
+  align-items: center;
+}
+.notification .notification-content-wrapper .type-notify img {
+  margin-right: 10px;
+}
+.notification .notification-content-wrapper a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.notification .notification-content-wrapper #notification-content-accordion-body,
+.notification .notification-content-wrapper #notification-content-accordion-skipped-cols {
+  background-color: transparent;
+}
+.notification .notification-content-wrapper #notification-content-accordion-body .dx-accordion-item-title,
+.notification .notification-content-wrapper #notification-content-accordion-skipped-cols .dx-accordion-item-title {
+  font-size: 12px;
+  padding-left: 0;
+  text-decoration: underline;
+}
+.notification .notification-content-wrapper #notification-content-accordion-body .dx-accordion-wrapper,
+.notification .notification-content-wrapper #notification-content-accordion-skipped-cols .dx-accordion-wrapper {
+  border: none;
+}
+.notification .notification-content-wrapper #notification-content-accordion-body .dx-item.dx-accordion-item,
+.notification .notification-content-wrapper #notification-content-accordion-skipped-cols .dx-item.dx-accordion-item {
+  border: none;
+}
+.notification .notification-content-wrapper #notification-content-accordion-body .dx-item.dx-accordion-item .dx-accordion-item-body,
+.notification .notification-content-wrapper #notification-content-accordion-skipped-cols .dx-item.dx-accordion-item .dx-accordion-item-body {
+  padding: 5px 10px;
+}
+.notification .notification-content-wrapper .notification-content-header {
+  font-weight: 400;
+}
+.notification .dx-toast-info {
+  border: 2px solid #5598fc;
+  background-color: rgba(82, 152, 252, 0.1);
+}
+.notification .dx-toast-info .dx-accordion-item-body {
+  border-left: 1px solid #5598fc;
+}
+.notification .dx-toast-error {
+  border: 2px solid #e63e3e;
+  background-color: rgba(230, 62, 63, 0.1);
+}
+.notification .dx-toast-error .dx-accordion-item-body {
+  border-left: 1px solid #e63e3e;
+}
+.notification .dx-toast-success {
+  border: 2px solid #92b960;
+  background-color: rgba(146, 185, 96, 0.1);
+}
+.notification .dx-toast-success .dx-accordion-item-body {
+  border-left: 1px solid #92b960;
+}
+.notification .dx-toast-warning {
+  border: 2px solid #dfcd26;
+  background-color: rgba(223, 205, 38, 0.1);
+}
+.notification .dx-toast-warning .dx-accordion-item-body {
+  border-left: 1px solid #dfcd26;
+}
+.notification .dx-toast-error,
+.notification .dx-toast-success,
+.notification .dx-toast-info,
+.notification .dx-toast-warning {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  min-height: 80px;
+  height: max-content !important;
+}
+.theme-light .notification {
+  background-color: white;
+  color: black;
+}
+.theme-light .notification-content-wrapper .dx-button.dx-button-has-icon .dx-icon {
+  filter: none !important;
+}
+/*# sourceMappingURL=styles.css.map */

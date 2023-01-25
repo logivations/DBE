@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * (C) Copyright
+ * Logivations GmbH, Munich 2010-2023
+ ******************************************************************************/
+.footer-holder {
+  width: 99%;
+  padding-left: 10px;
+}
+.footer-holder.dx-toolbar .dx-toolbar-items-container {
+  height: 37px;
+}
+.footer-holder span {
+  font-weight: 400;
+  font-size: 12px;
+}
+.footer-holder .dx-toolbar .dx-toolbar-before {
+  padding-left: 10px;
+}
+.footer-holder .dx-toolbar .dx-toolbar-before .dx-toolbar-label {
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+/*# sourceMappingURL=style.css.map */

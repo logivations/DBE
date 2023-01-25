@@ -1,0 +1,113 @@
+{
+    "items": [
+        {
+            "key": "$base-accent",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$base-success",
+            "value": "#8dbf4c"
+        },
+        {
+            "key": "$base-font-family",
+            "value": "\"Open Sans\", sans-serif;"
+        },
+        {
+            "key": "$filterbuilder-group-operation-color",
+            "value": "rgba(217, 83, 79, 0.8)"
+        },
+        {
+            "key": "$filterbuilder-item-field-color",
+            "value": " rgba(28,168,221,.8)"
+        },
+        {
+            "key": "$filterbuilder-remove-icon-color",
+            "value": "rgba(217, 83, 79, 0.8)"
+        },
+        {
+            "key": "$filterbuilder-item-value-color",
+            "value": "rgba(204,204,204,.8)"
+        },
+        {
+            "key": "$filterbuilder-plus-icon-color",
+            "value": "rgba(141,191,76,.8)"
+        },
+        {
+            "key": "$filterbuilder-item-operator-color",
+            "value": "rgba(141,191,76,.8)"
+        },
+        {
+            "key": "$form-field-item-color",
+            "value": "#dedede"
+        },
+        {
+            "key": "$datagrid-columnchooser-item-color",
+            "value": "#dedede"
+        },
+        {
+            "key": "$datagrid-menu-icon-color",
+            "value": "rgba(141, 191, 76, 1)"
+        },
+        {
+            "key": "$datagrid-columnchooser-font-weight",
+            "value": "bold"
+        }
+    ],
+    "baseTheme": "generic.dark.compact",
+    "outputColorScheme": "dark-theme",
+    "makeSwatch": false,
+    "version": "22.2.3",
+    "widgets": [
+        "DataGrid",
+        "Accordion",
+        "Box",
+        "ContextMenu",
+        "Drawer",
+        "Menu",
+        "MultiView",
+        "ResponsiveBox",
+        "TabPanel",
+        "Tabs",
+        "TileView",
+        "Toolbar",
+        "TreeView",
+        "Autocomplete",
+        "Calendar",
+        "CheckBox",
+        "ColorBox",
+        "DateBox",
+        "DropDownBox",
+        "Form",
+        "HtmlEditor",
+        "Lookup",
+        "NumberBox",
+        "RadioGroup",
+        "RangeSlider",
+        "SelectBox",
+        "Slider",
+        "Switch",
+        "TagBox",
+        "TextBox",
+        "Validation",
+        "ActionSheet",
+        "Button",
+        "ButtonGroup",
+        "DropDownButton",
+        "SpeedDialAction",
+        "FilterBuilder",
+        "LoadIndicator",
+        "LoadPanel",
+        "Popover",
+        "Popup",
+        "ProgressBar",
+        "ScrollView",
+        "Sortable",
+        "Toast",
+        "Tooltip",
+        "FileManager",
+        "FileUploader",
+        "Gallery",
+        "List"
+    ],
+    "removeExternalResources": true
+}
