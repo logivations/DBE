@@ -1,6 +1,7 @@
 {
   "name": "root1",
   "version": "0.1.0",
+  "homepage": "https://logivations.github.io/DBE/",
   "private": true,
   "dependencies": {
     "@sentry/react": "^7.14.1",
@@ -16,6 +17,7 @@
     "devextreme": "^22.1.6",
     "devextreme-react": "^22.1.6",
     "dexie": "^3.2.2",
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "query-string": "^7.1.0",
@@ -62,7 +64,9 @@
     "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "build": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts build\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "react-scripts start"
