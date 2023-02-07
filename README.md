@@ -91,6 +91,8 @@ The functionality is used for easily loading data into DBE tables from csv files
 Riesstrasse 16
 80992 Munich, Germany
 
-[+49 89 21909750](tel:+49 89 21909750)
-[info@logivations.com](mailto:info@logivations.com)
+Phone: +49 89 21909750
+
+Email: [info@logivations.com](mailto:info@logivations.com)
+
 ------------
